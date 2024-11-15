@@ -56,7 +56,7 @@ class MyProfilePage extends StatelessWidget {
                 Text(
                   'Ice cream is very delicious right?',
                   textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 18, color: Colors.black),
+                  style: TextStyle(fontSize: 18, color: Colors.black,fontWeight: FontWeight.bold),
                 ),
               ],
             ),
@@ -76,7 +76,7 @@ class MyProfilePage extends StatelessWidget {
                 Text(
                   'Programming is not boring if you love it',
                   textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 18, color: Colors.black),
+                  style: TextStyle(fontSize: 18, color: Colors.black,fontWeight: FontWeight.bold),
                 ),
               ],
             ),
@@ -96,7 +96,7 @@ class MyProfilePage extends StatelessWidget {
                 Text(
                   'If you submit code directly copy from Chatgpt then mark will 0',
                   textAlign: TextAlign.start,
-                  style: TextStyle(fontSize: 18, color: Colors.black),
+                  style: TextStyle(fontSize: 18, color: Colors.black,fontWeight: FontWeight.bold),
                 ),
               ],
             ),
