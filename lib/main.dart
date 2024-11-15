@@ -81,8 +81,6 @@ class MyProfilePage extends StatelessWidget {
               ],
             ),
             SizedBox(height: 30),
-
-            // Third Item
             Column(
               children: [
                 CircleAvatar(
