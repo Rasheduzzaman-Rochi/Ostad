@@ -1,54 +1,109 @@
-// ignore_for_file: avoid_print
+import 'package:flutter/material.dart';
 
-class Book {
-  String title;
-  String author;
-  int publicationYear;
-  int pagesRead;
-  static int totalBooks = 0;
+void main() {
+  runApp(MyApp());
+}
 
-  Book({
-    required this.title,
-    required this.author,
-    required this.publicationYear,
-    this.pagesRead = 0,
-  }) {
-    totalBooks++;
-  }
-
-  void read(int pages) {
-    pagesRead += pages;
-  }
-
-  int getPagesRead() => pagesRead;
-  String getTitle() => title;
-  String getAuthor() => author;
-  int getPublicationYear() => publicationYear;
-  int getBookAge() => DateTime.now().year - publicationYear;
-
+class MyApp extends StatelessWidget {
   @override
-  String toString() {
-    return 'title:$title,author:$author,publicationYear:$publicationYear,pagesRead:$pagesRead';
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: MyProfilePage(),
+      debugShowCheckedModeBanner: false,
+    );
   }
 }
 
-void main() {
-  Book book1 =
-      Book(title: '1984', author: 'George Orwell', publicationYear: 1949);
-  Book book2 = Book(
-      title: 'To Kill a Mockingbird',
-      author: 'Harper Lee',
-      publicationYear: 1960);
-  Book book3 = Book(title: '1970', author: 'Tom', publicationYear: 2003);
+class MyProfilePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('My Profile'),
+        toolbarHeight: 60,
+        backgroundColor: Colors.amber,
+        actions: [
+          IconButton(
+            icon: Icon(Icons.add),
+            onPressed: () {},
+          ),
+          IconButton(
+            icon: Icon(Icons.settings),
+            onPressed: () {},
+          ),
+          IconButton(
+            icon: Icon(Icons.call),
+            onPressed: () {},
+          ),
+        ],
+      ),
+      body: Container(
+        child: Column(
+          children: [
+            Column(
+              children: [
+                CircleAvatar(
+                  radius: 40,
+                  backgroundColor: Colors.grey,
+                  child: Icon(
+                    Icons.icecream_outlined,
+                    size: 80,
+                    color: Colors.black,
+                  ),
+                ),
+                SizedBox(height: 10),
+                Text(
+                  'Ice cream is very delicious right?',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 16, color: Colors.black),
+                ),
+              ],
+            ),
+            SizedBox(height: 30),
+            Column(
+              children: [
+                CircleAvatar(
+                  radius: 40,
+                  backgroundColor: Colors.purple.shade100,
+                  child: Icon(
+                    Icons.code,
+                    size: 40,
+                    color: Colors.purple,
+                  ),
+                ),
+                SizedBox(height: 10),
+                Text(
+                  'Programming is not boring if you love it',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 16, color: Colors.black),
+                ),
+              ],
+            ),
+            SizedBox(height: 30),
 
-  book1.read(80);
-  book2.read(150);
-  book3.read(120);
-
-  for (var book in [book1, book2, book3]) {
-    print(book.toString());
-    print('Book age: ${book.getBookAge()} years.');
-    print('----------------------------------');
+            // Third Item
+            Column(
+              children: [
+                CircleAvatar(
+                  radius: 40,
+                  backgroundColor: Colors.purple.shade100,
+                  child: Icon(
+                    Icons.egg_sharp,
+                    size: 40,
+                    color: Colors.purple,
+                  ),
+                ),
+                SizedBox(height: 10),
+                Text(
+                  'If you submit code directly copy from ChatGPT then mark will 0',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 16, color: Colors.black),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
   }
-  print('The total number of books: ${Book.totalBooks}');
 }
