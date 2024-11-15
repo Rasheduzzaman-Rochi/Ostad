@@ -19,89 +19,37 @@ class MyProfilePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('My Profile'),
+        title: Text('Need Blood'),
         toolbarHeight: 60,
-        backgroundColor: Colors.amber,
+        centerTitle: true,
+        backgroundColor: Colors.red,
+        foregroundColor: Colors.white,
         actions: [
           IconButton(
             icon: Icon(Icons.add),
             onPressed: () {},
           ),
-          IconButton(
-            icon: Icon(Icons.settings),
-            onPressed: () {},
-          ),
-          IconButton(
-            icon: Icon(Icons.call),
-            onPressed: () {},
-          ),
         ],
       ),
       body: Container(
-        child: Column(
-          children: [
-            Column(
-              children: [
-                CircleAvatar(
-                  radius: 40,
-                  backgroundColor: Colors.grey,
-                  child: Icon(
-                    Icons.icecream_outlined,
-                    size: 80,
-                    color: Colors.black,
-                  ),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              CircleAvatar(
+                radius: 90,
+                backgroundColor: Colors.grey[600],
+                child: Icon(
+                  Icons.bloodtype_outlined,
+                  size: 120,
+                  color: Colors.red,
                 ),
-                SizedBox(height: 10),
-                Text(
-                  'Ice cream is very delicious right?',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 16, color: Colors.black),
-                ),
-              ],
-            ),
-            SizedBox(height: 30),
-            Column(
-              children: [
-                CircleAvatar(
-                  radius: 40,
-                  backgroundColor: Colors.purple.shade100,
-                  child: Icon(
-                    Icons.code,
-                    size: 40,
-                    color: Colors.purple,
-                  ),
-                ),
-                SizedBox(height: 10),
-                Text(
-                  'Programming is not boring if you love it',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 16, color: Colors.black),
-                ),
-              ],
-            ),
-            SizedBox(height: 30),
-
-            // Third Item
-            Column(
-              children: [
-                CircleAvatar(
-                  radius: 40,
-                  backgroundColor: Colors.purple.shade100,
-                  child: Icon(
-                    Icons.egg_sharp,
-                    size: 40,
-                    color: Colors.purple,
-                  ),
-                ),
-                SizedBox(height: 10),
-                Text(
-                  'If you submit code directly copy from ChatGPT then mark will 0',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 16, color: Colors.black),
-                ),
-              ],
-            ),
-          ],
+              ),
+              SizedBox(height: 10),
+              Text("Donate Blood",
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+            ],
+          ),
         ),
       ),
     );
