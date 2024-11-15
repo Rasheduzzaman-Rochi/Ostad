@@ -42,20 +42,21 @@ class MyProfilePage extends StatelessWidget {
           children: [
             Column(
               children: [
+                SizedBox(height: 10),
                 CircleAvatar(
-                  radius: 40,
-                  backgroundColor: Colors.grey,
+                  radius: 80,
+                  backgroundColor: Colors.deepPurpleAccent[50],
                   child: Icon(
                     Icons.icecream_outlined,
-                    size: 80,
-                    color: Colors.black,
+                    size: 90,
+                    color: Colors.indigoAccent[800],
                   ),
                 ),
-                SizedBox(height: 10),
+                SizedBox(height: 15),
                 Text(
                   'Ice cream is very delicious right?',
                   textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 16, color: Colors.black),
+                  style: TextStyle(fontSize: 18, color: Colors.black),
                 ),
               ],
             ),
@@ -63,19 +64,19 @@ class MyProfilePage extends StatelessWidget {
             Column(
               children: [
                 CircleAvatar(
-                  radius: 40,
-                  backgroundColor: Colors.purple.shade100,
+                  radius: 80,
+                  backgroundColor: Colors.deepPurpleAccent[50],
                   child: Icon(
                     Icons.code,
-                    size: 40,
-                    color: Colors.purple,
+                    size: 90,
+                    color: Colors.indigoAccent[800],
                   ),
                 ),
-                SizedBox(height: 10),
+                SizedBox(height: 15),
                 Text(
                   'Programming is not boring if you love it',
                   textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 16, color: Colors.black),
+                  style: TextStyle(fontSize: 18, color: Colors.black),
                 ),
               ],
             ),
@@ -85,19 +86,19 @@ class MyProfilePage extends StatelessWidget {
             Column(
               children: [
                 CircleAvatar(
-                  radius: 40,
-                  backgroundColor: Colors.purple.shade100,
+                  radius: 80,
+                  backgroundColor: Colors.deepPurpleAccent[50],
                   child: Icon(
-                    Icons.egg_sharp,
-                    size: 40,
-                    color: Colors.purple,
+                    Icons.egg_outlined,
+                    size: 90,
+                    color: Colors.indigoAccent[800],
                   ),
                 ),
-                SizedBox(height: 10),
+                SizedBox(height: 15),
                 Text(
-                  'If you submit code directly copy from ChatGPT then mark will 0',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 16, color: Colors.black),
+                  'If you submit code directly copy from Chatgpt then mark will 0',
+                  textAlign: TextAlign.start,
+                  style: TextStyle(fontSize: 18, color: Colors.black),
                 ),
               ],
             ),
