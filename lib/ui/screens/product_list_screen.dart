@@ -14,7 +14,7 @@ class ProductListScreen extends StatefulWidget {
 }
 
 class _ProductListScreenState extends State<ProductListScreen> {
-  List<Product> productList =[];
+  List<Product> productList = [];
 
   @override
   void initState() {
@@ -43,12 +43,13 @@ class _ProductListScreenState extends State<ProductListScreen> {
     );
   }
 
-  Future<void> _getProductList() async{
+  Future<void> _getProductList() async {
     Uri uri = Uri.parse('https://crud.teamrabbil.com/api/v1/ReadProduct');
-    Response response =await get(uri);
+    Response response = await get(uri);
     print(response.statusCode);
     print(response.body);
     if (response.statusCode == 200) {
       final decodedData = jsonDecode(response.body);
     }
-  }}
+  }
+}
