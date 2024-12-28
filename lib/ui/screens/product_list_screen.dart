@@ -108,7 +108,7 @@ class _ProductListScreenState extends State<ProductListScreen> {
 
   Future<void> _deleteProduct(String productId, int index) async {
     try {
-      final response = await delete(
+      final response = await get(
         Uri.parse('https://crud.teamrabbil.com/api/v1/DeleteProduct/$productId'),
         headers: {'Content-Type': 'application/json'},
       );
